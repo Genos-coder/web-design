@@ -1,0 +1,9 @@
+.formating{
+    text-decoration: dashed red double 2px;
+    letter-spacing: 1rem;
+    line-height: 1rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-indent: 1rem;
+}
+
