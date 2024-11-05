@@ -1,0 +1,15 @@
+.sucker{
+    width: 100%;
+    padding: 1rem;
+    background-color:orange;
+    color:black;
+    overflow: auto;
+}
+
+.box1{
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+
