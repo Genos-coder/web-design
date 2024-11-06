@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+section{
+    height:100vh;
+    position: relative;
+}
+
+header{
+    background-color: maroon;
+    color:white;
+    padding: 1rem;
+    text-align:center;
+    position:sticky;
+    top: 0px;
+}
+
+footer{
+    background-color: grey;
+    color: white;
+    display:flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
