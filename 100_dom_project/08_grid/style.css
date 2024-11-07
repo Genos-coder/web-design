@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    height: 100vh;
+    column-gap: 0.5rem;
+}
+
+header{
+    background-color: brown;
+    color:white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    grid-column: 1/ 13;
+    grid-row: 1/2;
+
+}
+
+main{
+    background-color: grey;
+    color: white;
+    grid-column: 1/span 8;
+    grid-row:2/span 10 ;
+}
+
+footer{
+    background-color: orange;
+    grid-column: 1/13;
+    grid-row: 12/13;
+}
+
+aside{
+    background-color: aqua;
+    grid-column: 9/13;
+    grid-row: 2/12;
+}
