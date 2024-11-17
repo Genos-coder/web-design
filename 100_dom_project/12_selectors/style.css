@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Descendent selector */
+
+div p{
+    background-color: aqua;
+}
+
+/* child combinator */
+
+div > p {
+    background-color: antiquewhite;
+}
+
+
+
+/* Will select the p right after a div */
+
+div + p{
+    background-color: blanchedalmond;
+}
+
+/* If you want to select all the p which are sibling which means they are after a div then you can use ~ */
+
+
+div ~ p{
+    background-color: aquamarine;
+}
