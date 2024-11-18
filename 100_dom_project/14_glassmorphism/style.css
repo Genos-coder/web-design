@@ -1,356 +1,379 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
 
 
-body{
-    min-height: 100vh;
-    width: 100%;
-}
+        body {
+            min-height: 100vh;
+            width: 100%;
+        }
 
 
-img{
-    display: block;
-}
+        img {
+            display: block;
+        }
 
-h2{
-    margin: 2rem;
-}
-
-
-main{
-    width: 100%;
-    margin: auto;
-}
+        h2 {
+            margin: 2rem;
+        }
 
 
+        main {
+            width: 100%;
+            margin: auto;
+        }
 
-section{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* form section css */
 
-#editorform form{
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* form section css */
+
+        #editorform form {
+
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            gap: 1rem;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            flex-direction: column;
+            color: white;
+            position: relative;
+        }
+
+        #form_head {
+            background-color: rgba(255, 255, 255, 0.4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-size: min(4rem, 10vw);
+            margin: 1rem;
+            text-align: center;
+        }
+
+
+        #editorform {
+            height: 100%;
+            padding-bottom: 3rem;
+            background-image: url("https://img.freepik.com/free-vector/beautiful-wavy-background_23-2148465607.jpg?t=st=1731946657~exp=1731950257~hmac=ac449bf128509f9d7e491b3b6d36a77953dbf04af7fe9a29224b1bff599c128d&w=996");
+            /* background-image: url("https://img.freepik.com/free-vector/colorful-abstract-background-vector_53876-62769.jpg?t=st=1731946868~exp=1731950468~hmac=96bd4310638b8a5360d0301ca87593b641a48849600286fce108d693bb663d0a&w=740"); */
+            background-size: 300% 300%;
+            width: 100%;
+            animation: gradientBG 15s infinite alternate;
+
+        }
+
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        label {
+            font-size: 1.3rem;
+        }
+
+        .form_fieldsgroup {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 0.3rem;
+        }
+
+
+
+        .form_fieldsgroup_lvl2 {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        legend {
+            font-size: 1.3rem;
+        }
+
+        .form_fieldsgroup_lvl2 input {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+
+        }
+
+        .form_fieldsgroup.radioeffector {
+            display: flex;
+            align-items: baseline;
+            width: 100%;
+            gap: 2rem;
+            flex-direction: row;
+        }
+
+        .radioeffectorlvl2 {
+            display: flex;
+            width: 50%;
+            gap: 10px;
+
+        }
+
+        .radioeffectorlvl2 label {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .radioeffectorlvl2.extrasize label {
+            font-size: 1.3rem;
+        }
+
+        .radioeffectorlvl2.extrasize {
+            flex-direction: column;
+        }
+
+        .radioeffectorlvl2.extrasize input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 0.5rem;
+
+        }
+
+        .form_fieldsgroup.uploadfiles {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form_fieldsgroup.uploadfiles fieldset div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form_fieldsgroup.uploadfiles fieldset div label {
+            font-size: 1rem;
+        }
+
+        .form_fieldsgroup.radioeffector.effector3 {
+            gap: 2rem;
+
+
+        }
+
+        .form_fieldsgroup.radioeffector.effector3 .radioeffectorlvls2 {
+            width: 50%;
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form_fieldsgroup.radioeffector.effector3 .radioeffectorlvls2 textarea {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        hr {
+            width: 80%;
+            margin: 0.5rem auto;
+        }
+
+        select {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 2px;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .form_buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form_buttons button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.3rem;
+        }
+
+        .form_buttons button:hover {
+            background-image: linear-gradient(to left, rgb(255, 79, 199), rgb(255, 7, 176));
+            color: white;
+        }
+
+
+        #embeddings {
+            width: 100%;
+            margin: auto;
+            height: 100%;
+            display: fle;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* background-image: linear-gradient(180deg, rgb(12, 1, 29), rgb(30, 16, 226), rgb(14, 4, 71)); */
+            background-color: black;
+            color: white;
+            padding: 3rem auto;
+        }
+
+        #embeddings h2 {
+            font-size: min(4rem, 10vw);
+
+        }
+
+        .embeddings_embedstuff {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .embeddings_embedstuff iframe {
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+
+        .embeddings_embedstuff video {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        #mail {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            background: linear-gradient(to right, #fb822c, #f85239, #ff0000);
+            background-size: 300% 300%;
+            color: white;
+            animation: gradientBG 6s infinite alternate;
+        }
+
+
+        #mail h2 {
+            font-size: min(4rem, 10vw);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-stroke: 1px white;
+            text-align: center;
+            color: transparent;
+
+        }
+
+        #mail form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem;
+            border: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            gap: 0.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        #mail form input {
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+        }
+
+        .embeddings_embedstuff iframe {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: 0;
+        }
+
+        .embeddings_embedstuff {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #mail button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .mailto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #embeddings h2 {
+            text-align: center;
+        }
+
+        @media screen and (max-width:768px) {
+            .embeddings_embedstuff {
+                width: 50%;
+            }
+
+            #editorform form {
+                width: 95%;
+            }
+        }
+
+
+        @media screen and (max-width:992px) {
+            #editorform form {
+                width: 95%;
+            }
+        }
+
+        @media screen and (max-width:568px) {
+            .form_fieldsgroup_lvl2 {
+                flex-direction: column;
+            }
+
+            .form_fieldsgroup.radioeffector {
+                flex-direction: column;
+
+            }
+
+            #editorform for m {
+                width: 85%;
+            }
+
+        }
     
-    width: 50%;
-    display: flex;
-    align-items: flex-start;
-    background-color: rgba(255, 255, 255,0.3);
-    padding: 2rem;
-    border-radius: 1rem;
-    backdrop-filter: blur(10px);
-    gap: 1rem;
-    height: 100%;
-    border: 1px solid  rgba(255, 255, 255,0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    color: white;
-    position: relative;
-}
-
-#form_head{
-    background-color:rgba(255, 255, 255,0.4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 1px  white;
-    color: transparent;
-    font-size: min(4rem, 10vw);
-    margin: 1rem;
-    text-align: center;
-}
-
-
-#editorform{
-    height: 100%;
-    padding-bottom: 3rem;
-    background-image: url("https://img.freepik.com/free-vector/beautiful-wavy-background_23-2148465607.jpg?t=st=1731946657~exp=1731950257~hmac=ac449bf128509f9d7e491b3b6d36a77953dbf04af7fe9a29224b1bff599c128d&w=996");
-    /* background-image: url("https://img.freepik.com/free-vector/colorful-abstract-background-vector_53876-62769.jpg?t=st=1731946868~exp=1731950468~hmac=96bd4310638b8a5360d0301ca87593b641a48849600286fce108d693bb663d0a&w=740"); */
-    background-size: 300% 300%;
-    width: 100%;
-    animation: gradientBG 15s infinite alternate;
-
-}
-
-
-@keyframes gradientBG{
-    0%{
-        background-position: 0% 50%;
-    }
-
-    100%{
-        background-position: 100% 50%;
-    }
-}
-
- label{
-    font-size: 1.3rem;
-}
-
-.form_fieldsgroup{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.3rem;
-}
-
-
-
-.form_fieldsgroup_lvl2{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-
-}
-fieldset{
-    border: none;
-}
-legend{
-    font-size: 1.3rem;
-}
-
-.form_fieldsgroup_lvl2 input{
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255,0.1);
-    color: white;
-    
-}
-
-.form_fieldsgroup.radioeffector{
-    display: flex;
-    align-items: baseline;
-    width: 100%;
-    gap: 2rem;
-    flex-direction: row;
-} 
-.radioeffectorlvl2{
-    display: flex;
-    width: 50%;
-    gap: 10px ;
-
-}
-.radioeffectorlvl2 label{
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.radioeffectorlvl2.extrasize label{
-    font-size: 1.3rem;
-}
-.radioeffectorlvl2.extrasize {
-    flex-direction: column;
-}
-
-.radioeffectorlvl2.extrasize input{
-    background-color:rgba(255, 255, 255,0.1) ;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 0.5rem;
-
-}
-
-.form_fieldsgroup.uploadfiles{
-    display: flex;
-    flex-direction: column;
-}
-.form_fieldsgroup.uploadfiles fieldset div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.form_fieldsgroup.uploadfiles fieldset div label{
-    font-size: 1rem;
-}
-
-.form_fieldsgroup.radioeffector.effector3 {
-gap: 2rem;
-
-
-}
-
-.form_fieldsgroup.radioeffector.effector3 .radioeffectorlvls2{
-    width: 50%;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.form_fieldsgroup.radioeffector.effector3 .radioeffectorlvls2 textarea{
-    background-color: rgba(255, 255, 255,0.3);
-    border-radius: 5px;
-}
-
-hr{
-    width: 80%;
-    margin: 0.5rem auto;
-}
-select{
-    background-color: rgba(255, 255, 255,0.1) ;
-    color: white;
-    border-radius: 2px;
-    padding: 1rem;
-    width: 100%;
-}
-
-.form_buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.form_buttons button{
-    padding: 0.5rem 1rem;
-    border:none ;
-    border-radius: 5px;
-    font-size: 1.3rem;
-}
-
-.form_buttons button:hover{
-    background-image: linear-gradient(to left , rgb(255, 79, 199), rgb(255, 7, 176));
-    color: white;
-}
-
-
-#embeddings{
-    width: 100%;
-    margin: auto;
-    height: 100%;
-    display: fle;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* background-image: linear-gradient(180deg, rgb(12, 1, 29), rgb(30, 16, 226), rgb(14, 4, 71)); */
-    background-color: black;
-    color: white;
-    padding: 3rem auto;
-}
-
-#embeddings  h2{
-    font-size: min(4rem, 10vw);
-    
-}
-.embeddings_embedstuff{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 5rem;
-}
-.embeddings_embedstuff iframe{
-    border: 5px solid white;
-    border-radius: 10px;
-}
-
-.embeddings_embedstuff video{
-    object-fit: cover;
-    width: 100%;
-}
-
-#mail{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    background: linear-gradient(to right, #fb822c, #f85239, #ff0000 );
-    background-size: 300% 300%;
-    color: white;
-    animation: gradientBG 6s infinite alternate;
-}
-
-
-#mail h2{
-    font-size: min(4rem, 10vw);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: 1px white;
-    text-align: center;
-    color: transparent;
-
-}
-#mail form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    border: rgba(255, 255, 255,0.3);
-    background-color: rgba(255, 255, 255,0.3);
-    border:1px solid rgba(255, 255, 255,0.3);
-    border-radius: 4px;
-    gap: 0.5rem;
-    backdrop-filter: blur(10px);
-}
-#mail form input{
-    padding:1rem ;
-    font-size: 1rem;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255,0.3);
-    border: 1px solid rgba(255, 255, 255,0.3);
-
-}
-.embeddings_embedstuff iframe {
-    width: 100%; 
-    max-width: 100%;
-    height: auto; 
-    aspect-ratio: 16 / 9; 
-    border: 0; 
-}
-
-.embeddings_embedstuff {
-    width: 100%; 
-    max-width: 600px; 
-    margin: 0 auto; 
-}
-#mail button{
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-.mailto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-@media screen and (max-width:768px){
-    .embeddings_embedstuff{
-        width: 50%;
-    }
-    #editorform form{
-        width: 95%;
-    }
-}
-
-
-@media screen and (max-width:992px){
-    #editorform form{
-        width: 95%;
-    }
-}
-
-@media screen and (max-width:568px){
-    .form_fieldsgroup_lvl2{
-        flex-direction: column;
-    }
-    .form_fieldsgroup.radioeffector{
-        flex-direction: column;
-
-    }
-    #editorform form{
-        width: 85%;
-    }
-   
-}
