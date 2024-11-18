@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding The Stuff</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <main>
+        <section id="editorform">
+            <h2 id="form_head">Form for video editor</h2>
+
+            <form action="">
+
+                <div class="form_fieldsgroup">
+                    <div class="form_fieldsgroup_lvl2">
+
+                        <div class="form_fieldsgroup">
+
+                            <label for="name">Name :</label>
+                            <input placeholder="you full name" type="text" name="name" id="name">
+                        </div>
+                        <div class="form_fieldsgroup">
+                            <label for="email">Email :</label>
+                            <input type="text" placeholder="eg:trex@gmail.com" name="email" id="email">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form_fieldsgroup radioeffector">
+                    <div class="radioeffectorlvl2">
+
+                        <legend>
+                            Select gender :
+                        </legend>
+                        <fieldset>
+
+                            <label for="male"><input type="radio" name="gender" id="male" value="male">Male</label>
+                            <label for="female"><input type="radio" name="gender" id="female"
+                                    value="female">Female</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="radioeffectorlvl2">
+
+                        <legend>Select Facilities :</legend>
+                        <fieldset>
+                            <label for="ac"><input type="checkbox">Ac</label>
+                            <label for="Pc"><input type="checkbox">Pc</label>
+                            <label for="Gym"><input type="checkbox">Gym</label>
+                            <label for="Free edibles"><input type="checkbox">Free edibles</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <hr>
+                <div class="form_fieldsgroup radioeffector">
+                    <div class="radioeffectorlvl2 extrasize">
+
+                        <legend style="text-align: left;">Tools you used :</legend>
+                        <select name="tools" id="usedtools" multiple size="3">
+                            <option value="">Select tools you used</option>
+                            <option value="adobe">Adobe</option>
+                            <option value="Pe">Pe</option>
+                            <option value="davinci">Davinci</option>
+                            <option value="midjourney">Midjourney</option>
+                        </select>
+                    </div>
+                    <div class="radioeffectorlvl2 extrasize">
+                        <label for="">Food you need :</label>
+                        <input list="browser">
+                        <datalist id="browser">
+                            <option value="veg">
+                            <option value="non-veg">
+                            <option value="air">
+                        </datalist>
+                    </div>
+                </div>
+                <hr>
+                <div class="form_fieldsgroup uploadfiles">
+                    <legend>Upload the required files :</legend>
+                    <fieldset>
+                        <div>
+
+                            <label for="photo">Upload a photo</label>
+                            <input type="file" id="photo" accept="image/png, image/jpeg">
+                        </div>
+                        <div>
+
+                            <label for="resume">Upload a resume</label>
+                            <input type="file" id="resume" accept=".pdf">
+                        </div>
+                        <div>
+                            <label for="payslip">Payslips</label>
+
+                            <input type="file" id="payslip" accept=".xlsx">
+                        </div>
+                    </fieldset>
+                </div>
+                <hr>
+                <div class="form_fieldsgroup radioeffector effector3">
+                    <div class="radioeffectorlvls2">
+
+                        <label for="how">How you know about us :</label>
+                        <textarea name="how" id="how" rows="3" cols="4"></textarea>
+                    </div>
+                    <div class="radioeffectorlvls2">
+
+                        <label style="white-space: nowrap;" for="salary">How much salary you expect :</label>
+                        <input type="range" name="salary" id="salary" max="10" min="1" step="1">
+                    </div>
+                </div>
+                <hr>
+                <div class="form_buttons">
+
+                    <button type="reset">Reset</button>
+                    <button type="submit">submit</button>
+                </div>
+            </form>
+        </section>
+        <section id="embeddings">
+            <h2>Our location and about us</h2>
+            <article class="embeddings_embedstuff">
+                <h3>Mulund Branch</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30148.399367170223!2d72.94850848620814!3d19.1711689027467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8cb8205a6d%3A0x3ecdf1de6f56b8c2!2sMagic%20Bus%20India%20Foundation!5e0!3m2!1sen!2sin!4v1731911964613!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+            <article class="embeddings_embedstuff">
+                <h3>Youtube Channel</h3>
+                <iframe width="424" height="238" src="https://www.youtube.com/embed/I6kGNMsXdd8"
+                    title="First Step Towards Success | Youth Livelihood Programme" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+            <article class="embeddings_embedstuff">
+                <h3>Sample video</h3>
+                <video src="https://videos.pexels.com/video-files/855081/855081-hd_1920_1080_25fps.mp4" autoplay loop
+                    controls></video>
+            </article>
+        </section>
+        <section id="mail">
+            <h2>Subscribe for daily newsletter</h2>
+            <form action="">
+
+                <label for="email">Email :</label>
+                <input type="email" placeholder="your email">
+                <button type="submit">submit</button>
+
+            </form>
+            <div class="mailto">
+                <p>
+
+                    For donation related inquiries
+                </p>
+                <a href="mailto:donors@magicbusindia.com">Click to send the mail</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
