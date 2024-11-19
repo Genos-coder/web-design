@@ -1,0 +1,203 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 10rem auto;
+}
+
+span {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
+/* CSS for units section */
+
+#units {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#units h2 {
+  text-align: center;
+  font-size: min(4rem, 10vw);
+  background-image: linear-gradient(to bottom, rgb(251, 251, 251), grey);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+
+#units .dependantunits {
+  font-size: 1rem;
+  padding: 0.5em;
+  background-color: brown;
+  color: white;
+}
+
+#units .levelone_with_em {
+  font-size: 2em;
+}
+#units .leveltwo_with_em {
+  font-size: 2em;
+}
+#units .levelthree_with_em {
+  font-size: 2em;
+}
+#units .levelone_with_rem {
+  font-size: 2rem;
+}
+#units .leveltwo_with_rem {
+  font-size: 2rem;
+}
+#units .levelthree_with_rem {
+  font-size: 2rem;
+}
+
+/* CSS for seletors section */
+
+h3 {
+  margin: 2rem auto 2rem;
+  font-size: 2rem;
+}
+#selectors {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+li:nth-child(2n-1) {
+  background-color: orange;
+}
+
+.siblingone + p {
+  background-color: green;
+}
+
+div ~ p {
+  background-color: red;
+  color: white;
+}
+
+div article p {
+  background-color: aqua;
+}
+
+div > address {
+  background-color: indigo;
+  color: white;
+}
+
+.inputboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.inputboxes input {
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+
+input[type="email"] {
+  background-color: blueviolet;
+}
+
+#positions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+}
+
+.container1 {
+  position: relative;
+}
+
+.relativebox {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background-color: brown;
+  color: white;
+}
+
+.container2 {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+}
+
+.container2 {
+  position: relative;
+}
+
+.absolutebox {
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  background-color: pink;
+  color: black;
+}
+.container3 {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+}
+
+.container3 {
+  position: relative;
+}
+
+.stickybox {
+  position: sticky;
+  top: 100px;
+  background-color: pink;
+  color: black;
+}
+.container4 {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+}
+
+.container3 {
+  position: relative;
+}
+
+.fixedbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: aqua;
+  color: black;
+}
+
+.spacer {
+  height: 1000px;
+}

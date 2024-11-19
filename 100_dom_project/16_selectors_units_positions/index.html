@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors In CSS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section id="units">
+        <h2>Try to resize the window to see how text size changes </h2>
+        <p>You should notice that font size get's smaller as you make browser window smaller</p>
+        <hr>
+        <p class="dependantunits">In this the font-size is 1rem = 16px and padding is 0.5em = 8px = 1/2 *1rem means em
+            is depend on the rem size provided to font-size</p>
+        <h3>Snowball Effect</h3>
+        <p>below is three level nested p tags they have div container and each of them got assign 2em font size which
+            multiplies
+            font-size at each level because
+            em refer to it's innermost parent </p>
+        <div class="levelone_with_em">
+            <p>Level one</p>
+            <div class="leveltwo_with_em">
+                <p>Level two</p>
+                <div class="levelthree_with_em">
+                    <p>Level three</p>
+                </div>
+            </div>
+        </div>
+        <p>On contrary to em the rem in this three level nested p tags relate to outermost div container who has 2rem
+            font-size</p>
+        <div class="levelone_with_rem">
+            <p>Level one</p>
+            <div class="leveltwo_with_rem">
+                <p>Level two</p>
+                <div class="levelthree_with_rem">
+                    <p>Level three</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="selectors">
+        <ul>
+            <li>Id selector can be written as #<code><</code>idname<code>></code> in css syntax.</li>
+        </ul>
+        <h3>
+            <span>
+                li:nth-child(2n-1)
+
+            </span>
+            here, this is a selector which is used to select odd children
+        </h3>
+        <ul>
+            <li class="child">item 1</li>
+            <li class="child">item 2</li>
+            <li class="child">item 3</li>
+            <li class="child">item 4</li>
+            <li class="child">item 5</li>
+        </ul>
+        <h3> Adjacent Sibling selector
+            <span>
+
+                .siblingone + p
+            </span>
+            here + is used for adjacent sibling selector which selects one p after .siblingone
+        </h3>
+        <div class="siblings">
+            <p class="siblingone"> Sibling one</p>
+            <p> Sibling two</p>
+        </div>
+        <h3>General Sibling selector
+            <span>
+
+                div ~ p
+            </span>
+            here ~ is used for general sibling selector which selects all p after any div
+        </h3>
+        <div>
+            <div>This is first div</div>
+            <p>This is first p</p>
+            <div>This is second div</div>
+            <p>This is second p</p>
+            <div>This is third div</div>
+            <p>This is third p</p>
+            <div>This is fourth div</div>
+            <p>This is fourth p</p>
+        </div>
+        <h3>Descendant selector
+            <span>
+
+                div article p
+            </span>
+            In descendant selector which go down to each level that is from div to article to p and selects all p .
+        </h3>
+        <div>
+            <article>
+                <p>This is p inside article and this article is inside div</p>
+            </article>
+        </div>
+        <h3>Child combinator
+            <span>
+
+                div > address
+            </span>
+            here > is used to indicate all address tag which are children of div.
+        </h3>
+        <div>
+            <address>
+                I live on planet pluto.
+            </address>
+        </div>
+        <h3> attribute selector
+            <span>
+
+                input[type="email"]
+            </span>
+            here attribute type is used to select only input who have type= "checkbox"
+        </h3>
+        <div class="inputboxes">
+
+            <input type="text" name="" id="">
+            <input type="password" name="" id="">
+            <input type="email" name="" id="">
+        </div>
+    </section>
+    <section id="positions">
+        <h3>No changes when we use relative position</h3>
+        <div class="container1">
+            <div class="box"></div>
+            <div class="box relativebox">relative</div>
+        </div>
+        <h3>changes when we use absolute position</h3>
+        <div class="container2">
+            <div class="box"></div>
+            <div class="box absolutebox">absolute</div>
+        </div>
+        <h3>changes and stick to position when we use sticky position but relative to parent</h3>
+        <p>Scroll to see how it stick to container</p>
+
+        <div class="container3">
+            <div class="box"></div>
+            <div class="box stickybox">Sticky</div>
+        </div>
+        <div class="spacer">
+
+        </div>
+        <h3>stick to position relative to browser when we use fixed position </h3>
+        <div class="container4">
+            <div class="box"></div>
+            <div class="box fixedbox">Fixed</div>
+        </div>
+        <div class="spacer">
+
+        </div>
+    </section>
+</body>
+
+</html>
