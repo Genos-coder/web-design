@@ -40,3 +40,22 @@ console.log(
     1 + 2
   }`
 );
+
+// console.log(a4); //cannot do this because variable is has to be declared even though it's a var it get's hoisted  but not get declared
+var a4 = "jake";
+
+const a5 = "constant variable";
+
+// a5 = "some stuff" cannot redeclare the constant variable
+
+//PRIMITIVE DATATYPES
+let a6 = "string"; //String
+let a7 = 12; // Number
+let a8 = false; // Boolean
+let a9 = undefined;
+let a10 = null;
+let a11 = Symbol("description");
+let a12 = 1234n; // Bigint
+
+//we can check type of variable using typeOf keyword
+console.log(typeof a6);
