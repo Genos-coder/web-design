@@ -29,7 +29,7 @@ function rollDice() {
 console.log(rollDice());
 //Date in js
 console.log(Date()); //It gives the string
-var todayDate = new Date(); // It gives the date object
+var todayDate = new Date(); // It gives the dat
 console.log(todayDate);
 console.log(todayDate.getTime());
 console.log(todayDate.getMilliseconds());

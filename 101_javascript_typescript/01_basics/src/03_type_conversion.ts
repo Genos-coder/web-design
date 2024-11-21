@@ -20,11 +20,7 @@ if (12 == "12") {
 
 // for more explicit type checking use ===
 
-// @ts-ignore  
+// @ts-ignore
 if (12 === "12") {
   console.log(true);
 }
-
-
-
-
