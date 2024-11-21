@@ -14,7 +14,7 @@ if (12 == "12") {
 }
 // In above example we can see that there is implicit type conversion is done the string is converted into number "12" = 12
 // for more explicit type checking use ===
-//@ts-ignore
+// @ts-ignore  
 if (12 === "12") {
     console.log(true);
 }
