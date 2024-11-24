@@ -44,3 +44,22 @@ console.log(str4.slice(0, -1)); // we can give the -1 as a parameter
 console.log(
   `This is not a end , ${str4} we must continue the journey until there is light.`
 );
+
+//Regex in javascript
+
+//Flags in regular expression
+
+const reg1 = /ganesh/g; //here means checking overall string i.e global
+const reg2 = /ganesh/i; // This add case insensitiveness in the regular expression
+const reg3 = /^ganesh$/m; // allows the multiline approach for the ^ and & means at instead checking at start and end of the entire string it will check at all new line
+
+const reg4 = /ganesh/s; // will allow the . to match the newline character
+const reg5 = /ganesh/u; // will allow to match the emojis and symbols
+
+//we can provide the last index for regex
+
+const reg6 = /ganesh/y;
+reg6.lastIndex = 5;
+
+const str6 = "test test";
+console.log(reg6.exec(str6));
