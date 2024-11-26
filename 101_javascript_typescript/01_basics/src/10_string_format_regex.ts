@@ -139,3 +139,122 @@ console.log(
 );
 
 //Leet-code1
+
+//Question1:-make the function which gives the amount of count the character appear in the string
+
+function countCharInStr(str: string, char: string) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++;
+    }
+  }
+  return count;
+}
+
+function countCharInStr2(str: string, char: string) {
+  let count = 0;
+  let index = str.indexOf(char);
+  while (index !== -1) {
+    ++count;
+    index = str.indexOf(char, index + 1);
+  }
+  return count;
+}
+
+// console.log(
+//   countCharInStr("this is some stuff which i can't share with you", "e")
+// );
+// console.log(
+//   countCharInStr2("this is some stuff which i can't share with you", "e")
+// );
+
+//Question2:- Create function t0 check palindrome
+
+function checkStringPalindrome(str: string) {
+  let reversedStr = "";
+  for (let i = 0; i < str.length; i++) {
+    reversedStr = str[i] + reversedStr;
+  }
+  return reversedStr === str;
+}
+
+//Using javascript functions
+function checkStringPalindrome2(str: string) {
+  return str.toLowerCase() === str.split("").reverse().join("").toLowerCase();
+}
+
+// console.log(checkStringPalindrome("efe"));
+// console.log(checkStringPalindrome2("efe"));
+
+//Question3:- check character at given index lowercase or not
+
+function checkLowerCase(str: string, index: number) {
+  if (str[index] === str[index].toLowerCase()) {
+    return true;
+  }
+  return false;
+}
+
+// console.log(checkLowerCase("tim", 1));
+
+//Question4:- write javascript function to extract unique string characters from string eg,aabbrrff ans:abrf
+
+function extractUniqueChar(str: string) {
+  let uniqueChars = "";
+  for (let i = 0; i < str.length; i++) {
+    if (!uniqueChars.includes(str[i])) {
+      uniqueChars += str[i];
+    }
+  }
+  return uniqueChars;
+}
+
+// console.log(extractUniqueChar("aabbrrff"));
+
+// Question5:-Write a function that accepts a positive number N.
+// The function should console log a pyramid shape
+// with N levels using the # character.  Make sure the
+// pyramid has spaces on both the left *and* right hand sides
+// --- Examples
+//   pyramid(1)
+//       '#'
+//   pyramid(2)
+//       ' # '
+//       '###'
+//   pyramid(3)
+//       '  #  '
+//       ' ### '
+//       '#####'
+
+//Algorithm:-
+/*
+step 1:creating loops for rows and columns
+step 2:run the loop where row runs n times and column runs 2n-1 times
+        eg: if n is 3 then output is 
+        # # # # #
+        # # # # #
+        # # # # #
+step 3:now for pyramid we have to create the if condition in which it filter out edging columns in such way  it should look like an pyramid
+step 4:- for this we first print # at every mid of row by getting midpoint  and print # at mid point and " " at empty space
+step 5:- creating the range in-order to print edging col #
+*/
+
+function createPyramid(n: number) {
+  let mid = Math.floor((2 * n - 1) / 2);
+  //In above we divide by two so and Math.floor it because ot zero based string indexing
+  console.log(mid);
+  for (let row = 0; row < n; row++) {
+    let printingStr = "";
+    for (let col = 0; col < 2 * n - 1; col++) {
+      if (mid <= col + row && mid >= col - row) {
+        printingStr += "#";
+      } else {
+        printingStr += " ";
+      }
+    }
+    console.log(printingStr);
+  }
+}
+// createPyramid(3);
+// createPyramid(4);
