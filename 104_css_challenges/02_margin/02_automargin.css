@@ -1,0 +1,32 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  gap: 3rem;
+}
+
+section {
+  width: 40%;
+  margin-left: auto;
+}
+
+aside {
+  width: 40%;
+  margin-right: auto;
+}
+
+aside img {
+  width: 100%;
+}
